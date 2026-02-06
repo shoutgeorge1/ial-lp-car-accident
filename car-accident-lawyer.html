@@ -692,24 +692,28 @@
         }
         .trust-badges-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 28px 32px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 24px 28px;
             align-items: center;
             justify-items: center;
+            align-content: center;
             background: var(--brand-white);
-            padding: 36px;
+            padding: 32px;
             border-radius: var(--card-radius);
             box-shadow: var(--card-shadow);
             border: 1px solid rgba(1, 54, 108, 0.08);
         }
         .trust-badge-img {
-            height: 90px;
-            width: 100%;
-            max-width: 150px;
+            height: 86px !important;
+            width: 100% !important;
+            max-width: 140px;
             object-fit: contain;
             opacity: 1;
             transition: all 0.3s ease;
             filter: none;
+        }
+        .trust-badges-row img[alt="CAOC"] {
+            order: -1;
         }
         .trust-badge-img.pop {
             opacity: 1;
@@ -726,11 +730,11 @@
         @media (max-width: 768px) {
             .trust-badges-row {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 20px;
-                padding: 24px;
+                gap: 16px;
+                padding: 20px;
             }
             .trust-badge-img {
-                height: 64px;
+                height: 60px !important;
                 max-width: 120px;
             }
         }
@@ -1892,6 +1896,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
