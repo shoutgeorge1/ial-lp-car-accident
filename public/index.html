@@ -65,6 +65,9 @@
             font-weight: 400;
             color: var(--brand-gray-700);
         }
+        .subtext-muted {
+            color: #4b5563;
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -123,15 +126,15 @@
                 line-height: 1.7;
             }
             p {
-                font-size: 18px;
+                font-size: 17px;
                 line-height: 1.7;
             }
             h1 {
                 font-size: 28px;
-                line-height: 1.25;
+                line-height: 1.2;
             }
             h2 {
-                font-size: 20px;
+                font-size: 24px;
             }
             h3 {
                 font-size: 20px;
@@ -347,6 +350,9 @@
             opacity: 0.04;
             z-index: 0;
             pointer-events: none;
+        }
+        .section-alt {
+            background: rgba(1, 54, 108, 0.03);
         }
         .section-with-bg > * {
             position: relative;
@@ -1106,6 +1112,17 @@
             text-align: center;
             border-bottom: 1px solid rgba(1, 54, 108, 0.25);
         }
+        .stop-section {
+            padding: 60px 24px;
+        }
+        .stop-section h2 {
+            font-size: 32px;
+            font-weight: 800;
+        }
+        .stop-section p {
+            font-size: 20px;
+            font-weight: 600;
+        }
         .final-cta h2 {
             font-size: 36px;
             margin-bottom: 12px;
@@ -1140,6 +1157,14 @@
             transform: rotate(45deg);
             box-shadow: 0 10px 24px rgba(0,0,0,0.25);
             border: 3px solid rgba(255,255,255,0.6);
+        }
+        @keyframes softPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,0,0,0.0); }
+            50% { transform: scale(1.05); box-shadow: 0 0 18px rgba(255,0,0,0.25); }
+            100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,0,0,0.0); }
+        }
+        .stop-sign-icon {
+            animation: softPulse 2.8s ease-in-out infinite;
         }
         .stop-sign span {
             transform: rotate(-45deg);
@@ -1344,7 +1369,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Los Angeles Car Accident Lawyer – Free Consultation</h1>
-                    <p class="hero-subhead">Speak with a Los Angeles car accident attorney and injury lawyer for a free consultation after your crash.</p>
+                    <p class="hero-subhead" style="max-width: 520px; margin: 0 auto; line-height: 1.5; font-weight: 500;">Speak with a Los Angeles car accident attorney and injury lawyer for a free consultation after your crash.</p>
                     <div class="hero-cta-group">
                         <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335">Call Now — Free Consultation</a>
                     </div>
@@ -1394,7 +1419,7 @@
     <section class="trust-badges-section">
         <div class="trust-badges-container">
             <h2 style="text-align: center; margin-bottom: 16px;">Experienced Car Accident Attorneys in Los Angeles</h2>
-            <p class="lead-text" style="text-align: center; margin-bottom: 24px; max-width: 760px; margin-left: auto; margin-right: auto;">Work with a car accident attorney Los Angeles drivers trust and an auto accident lawyer LA families call to protect injury claims.</p>
+            <p class="lead-text subtext-muted" style="text-align: center; margin-bottom: 24px; max-width: 760px; margin-left: auto; margin-right: auto;">Work with a car accident attorney Los Angeles drivers trust and an auto accident lawyer LA families call to protect injury claims.</p>
             <div class="trust-badges-headline">Trusted & Recognized By</div>
             <div class="trust-badges-row">
                 <img src="images/la/trust-badge-1.webp" alt="Trust Badge" class="trust-badge-img">
@@ -1409,10 +1434,70 @@
         </div>
     </section>
 
-    <section class="accident-types section-with-bg">
+    <section id="reviews" class="reviews-section section-with-bg" style="padding-top: 100px;">
+        <div class="container">
+            <div class="reviews-header">
+                <h2>What Our Clients Say</h2>
+                <p class="subtext-muted" style="font-size: 18px; color: var(--brand-gray-700); margin-bottom: 24px;">Real reviews from real clients across Los Angeles County</p>
+                <div class="review-badges">
+                    <div class="review-badge">
+                        <img src="images/la/google-rating.png" alt="Google 5 Star Rating">
+                        <div class="review-badge-stars">★★★★★</div>
+                    </div>
+                    <div class="review-badge">
+                        <img src="images/la/yelp-logo.jpg" alt="Yelp">
+                        <div class="review-badge-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-cards">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 12px;">"Thanks Shawn you did a great job in my case, great customer service. I totally recommend this lawyers"</p>
+                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Maggie Romero</p>
+                    <p style="font-size: 14px; color: var(--brand-gray-500);">12 days ago</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 12px;">"Self-Explanatory. Excellent and professional"</p>
+                    <p style="font-weight: 600; color: var(--brand-gray-700);">- L'unique Malcom</p>
+                    <p style="font-size: 14px; color: var(--brand-gray-500);">19 days ago</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 12px;">"Shawn and his team were amazing throughout my entire case. They kept me informed every step of the way and got me a great settlement. Highly recommend!"</p>
+                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Robert Chen</p>
+                    <p style="font-size: 14px; color: var(--brand-gray-500);">3 weeks ago</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 12px;">"Professional, responsive, and got results. They handled everything with my insurance company and I didn't have to worry about a thing."</p>
+                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Maria Gonzalez</p>
+                    <p style="font-size: 14px; color: var(--brand-gray-500);">1 month ago</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 12px;">"Best decision I made after my accident. The team was compassionate, knowledgeable, and fought hard for me. Couldn't be happier with the outcome."</p>
+                    <p style="font-weight: 600; color: var(--brand-gray-700);">- James Wilson</p>
+                    <p style="font-size: 14px; color: var(--brand-gray-500);">2 months ago</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 12px;">"From the free consultation to case resolution, everything was handled professionally. They truly care about their clients and it shows."</p>
+                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Sarah Johnson</p>
+                    <p style="font-size: 14px; color: var(--brand-gray-500);">2 months ago</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335">Call Now — Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="accident-types section-with-bg section-alt">
         <div class="container">
             <h2>Types of Accidents We Handle</h2>
-            <p class="lead-text" style="text-align: center; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">Our accident attorneys help injured people in Los Angeles County recover compensation for medical bills, lost wages, and pain and suffering.</p>
+            <p class="lead-text subtext-muted" style="text-align: center; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">Our accident attorneys help injured people in Los Angeles County recover compensation for medical bills, lost wages, and pain and suffering.</p>
             <div class="accident-grid">
                 <div class="accident-item">
                     <div class="accident-icon">🚗</div>
@@ -1435,16 +1520,13 @@
                     <div class="accident-item-text">Wrongful Death</div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="tel:844-467-4335" class="btn-secondary" data-callrail-phone="844-467-4335">Get Legal Help Now</a>
-            </div>
         </div>
     </section>
 
     <section id="your-case" class="worth-section section-with-bg" style="background: var(--brand-white); padding-top: 100px;">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 16px; font-size: 42px;">Do I Have a Case?</h2>
-            <p class="lead-text" style="text-align: center; margin-bottom: 56px; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 20px;">If you were hurt in an accident, you may be entitled to compensation. Here's when we can help:</p>
+            <p class="lead-text subtext-muted" style="text-align: center; margin-bottom: 56px; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 20px;">If you were hurt in an accident, you may be entitled to compensation. Here's when we can help:</p>
             <div style="max-width: 1000px; margin: 0 auto;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px;">
                     <div style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; hover:transform: translateY(-4px);">
@@ -1497,17 +1579,14 @@
                     <p style="font-size: 22px; font-weight: 700; color: var(--brand-navy); margin-bottom: 16px;">Every case is unique</p>
                     <p style="font-size: 18px; line-height: 1.7; color: var(--brand-gray-700); margin: 0; max-width: 650px; margin-left: auto; margin-right: auto;">Talk to an experienced personal injury attorney today. We'll review your situation for free and explain your options in plain English.</p>
                 </div>
-                <div style="text-align: center;">
-                    <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335" style="font-size: 20px; padding: 18px 40px; box-shadow: 0 6px 20px rgba(245, 196, 0, 0.4);">Get My Case Reviewed</a>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="core-trust section-with-bg">
+    <section class="core-trust section-with-bg section-alt">
         <div class="container">
             <h2 style="text-align: center; font-size: 42px; margin-bottom: 24px;">Why Choose Our Personal Injury Attorneys</h2>
-            <p style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">Experienced accident attorneys who understand insurance claims and fight for maximum compensation.</p>
+            <p class="subtext-muted" style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">Experienced accident attorneys who understand insurance claims and fight for maximum compensation.</p>
             <div class="trust-grid">
                 <div class="trust-card">
                     <div class="trust-icon">⚖️</div>
@@ -1524,9 +1603,6 @@
                     <h3>Former Insurance Insight</h3>
                     <p>Our attorney worked with insurance companies before representing injured people. This unique perspective helps us build stronger cases and negotiate better settlements for our clients.</p>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 48px;">
-                <a href="tel:844-467-4335" class="btn-secondary" data-callrail-phone="844-467-4335">Speak With an Attorney</a>
             </div>
         </div>
     </section>
@@ -1555,7 +1631,6 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 48px;">
-                <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335">Start My Free Review</a>
                 <p style="margin-top: 16px; color: var(--brand-gray-700);">Call Now <a href="tel:844-467-4335" style="color: var(--brand-blue); text-decoration: none; font-weight: 600;"><span data-callrail-phone="844-467-4335">844-467-4335</span></a> | Available 24/7</p>
             </div>
         </div>
@@ -1564,10 +1639,7 @@
     <section class="worth-section section-with-bg">
         <div class="container">
             <h2 style="font-size: 42px; margin-bottom: 24px;">How Much Compensation Could You Receive?</h2>
-            <p style="font-size: 20px; color: var(--brand-gray-700); max-width: 800px; margin: 0 auto 40px; line-height: 1.7;">Every case is unique. Compensation depends on your injuries, medical expenses, lost wages, and other damages. Our experienced accident attorneys will evaluate your case and fight for the maximum compensation you deserve.</p>
-            <div style="text-align: center;">
-                <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335" style="font-size: 20px; padding: 18px 40px;">Estimate My Case Value</a>
-            </div>
+            <p class="subtext-muted" style="font-size: 20px; color: var(--brand-gray-700); max-width: 800px; margin: 0 auto 40px; line-height: 1.7;">Every case is unique. Compensation depends on your injuries, medical expenses, lost wages, and other damages. Our experienced accident attorneys will evaluate your case and fight for the maximum compensation you deserve.</p>
         </div>
     </section>
 
@@ -1595,63 +1667,6 @@
                         <div class="association-badge">Trial Lawyers University</div>
                         <div class="association-badge">The National Trial Lawyer</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="reviews-section section-with-bg" style="padding-top: 100px;">
-        <div class="container">
-            <div class="reviews-header">
-                <h2>What Our Clients Say</h2>
-                <p style="font-size: 18px; color: var(--brand-gray-700); margin-bottom: 24px;">Real reviews from real clients across Los Angeles County</p>
-                <div class="review-badges">
-                    <div class="review-badge">
-                        <img src="images/la/google-rating.png" alt="Google 5 Star Rating">
-                        <div class="review-badge-stars">★★★★★</div>
-                    </div>
-                    <div class="review-badge">
-                        <img src="images/la/yelp-logo.jpg" alt="Yelp">
-                        <div class="review-badge-stars">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-cards">
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 12px;">"Thanks Shawn you did a great job in my case, great customer service. I totally recommend this lawyers"</p>
-                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Maggie Romero</p>
-                    <p style="font-size: 14px; color: var(--brand-gray-500);">12 days ago</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 12px;">"Self-Explanatory. Excellent and professional"</p>
-                    <p style="font-weight: 600; color: var(--brand-gray-700);">- L'unique Malcom</p>
-                    <p style="font-size: 14px; color: var(--brand-gray-500);">19 days ago</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 12px;">"Shawn and his team were amazing throughout my entire case. They kept me informed every step of the way and got me a great settlement. Highly recommend!"</p>
-                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Robert Chen</p>
-                    <p style="font-size: 14px; color: var(--brand-gray-500);">3 weeks ago</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 12px;">"Professional, responsive, and got results. They handled everything with my insurance company and I didn't have to worry about a thing."</p>
-                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Maria Gonzalez</p>
-                    <p style="font-size: 14px; color: var(--brand-gray-500);">1 month ago</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 12px;">"Best decision I made after my accident. The team was compassionate, knowledgeable, and fought hard for me. Couldn't be happier with the outcome."</p>
-                    <p style="font-weight: 600; color: var(--brand-gray-700);">- James Wilson</p>
-                    <p style="font-size: 14px; color: var(--brand-gray-500);">2 months ago</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 12px;">"From the free consultation to case resolution, everything was handled professionally. They truly care about their clients and it shows."</p>
-                    <p style="font-weight: 600; color: var(--brand-gray-700);">- Sarah Johnson</p>
-                    <p style="font-size: 14px; color: var(--brand-gray-500);">2 months ago</p>
                 </div>
             </div>
         </div>
@@ -1764,10 +1779,10 @@
         </div>
     </section>
 
-    <section class="case-results section-with-bg">
+    <section class="case-results section-with-bg section-alt">
         <div class="container">
             <h2 style="text-align: center; font-size: 42px; margin-bottom: 16px;">Case Results</h2>
-            <p style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; line-height: 1.7;">Millions Recovered for Injury Victims</p>
+            <p class="subtext-muted" style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; line-height: 1.7;">Millions Recovered for Injury Victims</p>
             <div class="results-grid">
                 <div class="result-card">
                     <div class="result-label">Settlement</div>
@@ -1822,7 +1837,7 @@
         </div>
     </section>
 
-    <section id="map-section" class="map-section" style="padding-top: 100px;">
+    <section id="map-section" class="map-section section-alt" style="padding-top: 100px;">
         <div class="container">
             <h2 style="text-align: center;">Our Office Location</h2>
             <div class="map-container">
@@ -1836,9 +1851,9 @@
         </div>
     </section>
 
-    <section class="final-cta">
+    <section class="final-cta stop-section">
         <div class="container">
-            <div class="stop-sign"><span>STOP</span></div>
+            <div class="stop-sign stop-sign-icon"><span>STOP</span></div>
             <h2>Don’t Accept Anything Until You Know Your Case Value</h2>
             <p>Insurance companies move fast. Protect your claim before you sign or settle.</p>
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
