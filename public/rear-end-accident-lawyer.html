@@ -605,7 +605,7 @@
         }
         .trust-badges-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(4, minmax(120px, 1fr));
             gap: 24px 28px;
             align-items: center;
             justify-items: center;
@@ -624,6 +624,9 @@
             opacity: 1;
             transition: all 0.3s ease;
             filter: none;
+        }
+        .trust-badges-row img:nth-child(n + 5) {
+            grid-column: span 2;
         }
         .trust-badges-row img[alt="CAOC"] {
             order: -1;
@@ -1790,6 +1793,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
