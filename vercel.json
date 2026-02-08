@@ -1,7 +1,1 @@
-{
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/car-accident", "destination": "/car-accident/index.html" },
-    { "source": "/car-accident/", "destination": "/car-accident/index.html" }
-  ]
-}
+{"rewrites":[{"source":"/","destination":"/index.html"},{"source":"/car-accident","destination":"/car-accident/index.html"},{"source":"/car-accident/","destination":"/car-accident/index.html"},{"source":"/favicon.ico","destination":"/images/la/logo.png"}]}
