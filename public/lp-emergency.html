@@ -233,47 +233,59 @@
             color: #00ff00;
         }
         .attorneys-section {
-            padding: 48px 20px;
-            max-width: 900px;
+            padding: 64px 24px;
+            max-width: 960px;
             margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .attorneys-section .section-head {
+            text-align: center;
+            margin-bottom: 40px;
         }
         .attorneys-section h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
-            text-align: center;
-            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+            margin-bottom: 6px;
+            color: #fff;
         }
         .attorneys-section .section-sub {
-            text-align: center;
-            color: #ccc;
-            font-size: 16px;
-            margin-bottom: 32px;
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
         .attorneys-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 24px;
-            justify-items: center;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 28px;
         }
         .attorney-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 28px 20px;
             text-align: center;
-            width: 100%;
-            max-width: 160px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .attorney-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 68, 68, 0.25);
         }
         .attorney-photo-wrap {
-            width: 120px;
-            height: 120px;
-            min-width: 120px;
-            max-width: 120px;
+            width: 132px;
+            height: 132px;
+            min-width: 132px;
+            max-width: 132px;
             flex-shrink: 0;
-            margin: 0 auto 12px;
+            margin: 0 auto 20px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid #333;
-            background: #222;
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            background: #1a1a1a;
         }
         .attorney-photo {
             width: 100%;
@@ -285,14 +297,16 @@
             aspect-ratio: 1;
         }
         .attorney-name {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 800;
             color: #fff;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
+            letter-spacing: 0.01em;
         }
         .attorney-title {
             font-size: 12px;
             color: #999;
+            letter-spacing: 0.02em;
         }
         .video-section {
             background: rgba(255, 255, 255, 0.1);
@@ -345,13 +359,25 @@
             .phone-display {
                 font-size: 28px;
             }
+            .attorneys-section {
+                padding: 48px 20px;
+            }
             .attorneys-grid {
-                grid-template-columns: repeat(2, 120px);
-                justify-content: center;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
             .attorney-card {
-                max-width: 120px;
+                padding: 20px 16px;
+            }
+            .attorney-photo-wrap {
+                width: 100px;
+                height: 100px;
+                min-width: 100px;
+                max-width: 100px;
+                margin-bottom: 14px;
+            }
+            .attorney-name {
+                font-size: 15px;
             }
         }
     </style>
@@ -510,41 +536,43 @@
     </div>
 
     <section class="attorneys-section">
-        <h2>Our Attorneys</h2>
-        <p class="section-sub">Insider Accident Lawyers</p>
+        <div class="section-head">
+            <h2>Our Attorneys</h2>
+            <p class="section-sub">Insider Accident Lawyers</p>
+        </div>
         <div class="attorneys-grid">
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Shawn Rokni</div>
                 <div class="attorney-title">Managing Attorney</div>
             </div>
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Harvey Goldhammer</div>
                 <div class="attorney-title">Senior Litigation Attorney</div>
             </div>
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/nathaniel-clark.png" alt="Nathaniel Clark" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/nathaniel-clark.png" alt="Nathaniel Clark" class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Nathaniel Clark</div>
                 <div class="attorney-title">Senior Litigation Attorney</div>
             </div>
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/edward-yim.webp" alt="Edward C. Yim" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/edward-yim.webp" alt="Edward C. Yim" class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Edward C. Yim</div>
                 <div class="attorney-title">Senior Litigation Attorney</div>
             </div>
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/steven-salazar.png" alt="Steven Salazar" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/steven-salazar.png" alt="Steven Salazar" class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Steven Salazar</div>
                 <div class="attorney-title">Associate Attorney</div>
             </div>
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Donn W. Christensen, Esq.</div>
                 <div class="attorney-title">Managing Attorney</div>
             </div>
             <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/artur-mheryan.webp" alt="Artur Mheryan" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-photo-wrap"><img src="images/la/artur-mheryan.webp" alt="Artur Mheryan" class="attorney-photo" width="132" height="132" loading="lazy"></div>
                 <div class="attorney-name">Artur Mheryan</div>
                 <div class="attorney-title">Associate Attorney</div>
             </div>

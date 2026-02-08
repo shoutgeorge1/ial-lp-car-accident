@@ -1134,13 +1134,27 @@
             gap: 48px;
             align-items: start;
         }
-        .attorney-photo {
+        .attorney-photo-wrap {
+            max-width: 300px;
             width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
             border-radius: var(--card-radius);
             box-shadow: var(--card-shadow);
+            position: relative;
+        }
+        .attorney-photo-wrap .attorney-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
             transition: transform 0.3s ease;
         }
-        .attorney-photo:hover {
+        .attorney-photo-wrap:hover .attorney-photo {
             transform: scale(1.02);
         }
         .attorney-details {
@@ -1757,6 +1771,16 @@
             .attorney-bio-content {
                 grid-template-columns: 1fr;
             }
+            .attorney-photo-wrap {
+                margin: 0 auto;
+                width: min(100%, 300px);
+                max-width: 300px;
+            }
+            .attorney-photo-wrap::before {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
             .form-container {
                 padding: 24px;
             }
@@ -2185,7 +2209,7 @@
     <section id="about-us" class="attorney-bio section-with-bg" style="padding-top: 100px;">
         <div class="container">
             <div class="attorney-bio-content">
-                <img src="images/la/shawn-rokni.jpg" alt="Shawn Rokni" class="attorney-photo" width="300" height="300" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni.jpg" alt="Shawn Rokni" class="attorney-photo" width="300" height="300" loading="lazy"></div>
                 <div class="attorney-details">
                     <h2>Meet Your Attorney</h2>
                     <div class="attorney-name">Shawn Rokni</div>

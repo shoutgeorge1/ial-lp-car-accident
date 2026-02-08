@@ -203,10 +203,20 @@
             gap: 40px;
             align-items: start;
         }
-        .attorney-photo {
+        .attorney-photo-wrap {
+            max-width: 300px;
             width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .attorney-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
         }
         .trust-badges-section {
             background: #ffffff;
@@ -443,7 +453,7 @@
             .attorney-section {
                 grid-template-columns: 1fr;
             }
-            .attorney-photo {
+            .attorney-photo-wrap {
                 max-width: 250px;
                 margin: 0 auto;
             }
@@ -578,7 +588,7 @@
 
         <div class="section">
             <div class="attorney-section">
-                <img src="images/la/shawn-rokni.jpg" alt="Shawn Rokni" class="attorney-photo" width="300" height="300" loading="lazy">
+                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni.jpg" alt="Shawn Rokni" class="attorney-photo" width="300" height="300" loading="lazy"></div>
                 <div>
                     <div class="attorney-name">Shawn Rokni</div>
                     <div class="attorney-title">Personal Injury Attorney | Los Angeles</div>
