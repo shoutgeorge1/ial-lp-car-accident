@@ -1,1 +1,10 @@
-{"rewrites":[{"source":"/","destination":"/index.html"},{"source":"/car-accident","destination":"/car-accident/index.html"},{"source":"/car-accident/","destination":"/car-accident/index.html"},{"source":"/favicon.ico","destination":"/images/la/logo.png"}]}
+{
+  "rewrites": [
+    {"source": "/", "destination": "/index.html"},
+    {"source": "/car-accident", "destination": "/car-accident/index.html"},
+    {"source": "/car-accident/", "destination": "/car-accident/index.html"}
+  ],
+  "redirects": [
+    {"source": "/favicon.ico", "destination": "/images/la/logo.png", "permanent": false}
+  ]
+}
