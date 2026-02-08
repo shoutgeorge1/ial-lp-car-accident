@@ -574,20 +574,48 @@
             flex-wrap: wrap;
             margin-top: 20px;
         }
-        .hero-review-badges img {
-            height: 56px;
+        .hero-review-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-review-badges .hero-review-badge-item img {
+            height: 40px;
             width: auto;
             object-fit: contain;
             display: block;
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+        }
+        .hero-review-badge-rating {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        .hero-review-badge-rating .rating-num {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--brand-white);
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+        }
+        .hero-review-badge-rating .rating-stars {
+            font-size: 14px;
+            color: var(--brand-accent-yellow);
+            letter-spacing: 1px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
         }
         @media (max-width: 768px) {
             .hero-review-badges {
                 gap: 20px;
                 margin-top: 16px;
             }
-            .hero-review-badges img {
-                height: 44px;
+            .hero-review-badges .hero-review-badge-item img {
+                height: 32px;
+            }
+            .hero-review-badge-rating .rating-num {
+                font-size: 16px;
+            }
+            .hero-review-badge-rating .rating-stars {
+                font-size: 12px;
             }
         }
         @media (max-width: 768px) {
@@ -1764,8 +1792,20 @@
                         </div>
                     </div>
                     <div class="hero-review-badges">
-                        <img src="images/la/google-badge-frame.png" alt="Google Reviews">
-                        <img src="images/la/yelp-badge-reviews.png" alt="Yelp Reviews">
+                        <div class="hero-review-badge-item">
+                            <img src="images/la/google-g-logo.png" alt="Google">
+                            <div class="hero-review-badge-rating">
+                                <span class="rating-num">4.9</span>
+                                <span class="rating-stars">★★★★★</span>
+                            </div>
+                        </div>
+                        <div class="hero-review-badge-item">
+                            <img src="images/la/yelp-logo-aug2021.jpg" alt="Yelp">
+                            <div class="hero-review-badge-rating">
+                                <span class="rating-num">4.8</span>
+                                <span class="rating-stars">★★★★★</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-attorney-wrap">
