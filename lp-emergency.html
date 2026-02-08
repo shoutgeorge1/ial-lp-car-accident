@@ -268,10 +268,15 @@
             text-align: center;
             width: 100%;
             max-width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .attorney-photo-wrap {
             width: 120px;
             height: 120px;
+            min-width: 120px;
+            max-width: 120px;
             flex-shrink: 0;
             margin: 0 auto 12px;
             border-radius: 50%;
@@ -282,6 +287,7 @@
         .attorney-photo {
             width: 100%;
             height: 100%;
+            max-width: 100%;
             object-fit: cover;
             object-position: center top;
             display: block;
@@ -348,6 +354,14 @@
             .phone-display {
                 font-size: 28px;
             }
+            .attorneys-grid {
+                grid-template-columns: repeat(2, 120px);
+                justify-content: center;
+                gap: 20px;
+            }
+            .attorney-card {
+                max-width: 120px;
+            }
         }
     </style>
     <script type="text/javascript" src="//cdn.callrail.com/companies/328698587/a8e768ec751936e4d680/12/swap.js"></script>
@@ -381,48 +395,6 @@
         <p class="testimonial-text">"They answered my call immediately. I was scared and confused after my accident. They handled everything and got me the help I needed."</p>
         <p class="testimonial-author">— Maria G., Los Angeles</p>
     </div>
-
-    <section class="attorneys-section">
-        <h2>Our Attorneys</h2>
-        <p class="section-sub">Insider Accident Lawyers</p>
-        <div class="attorneys-grid">
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Shawn Rokni</div>
-                <div class="attorney-title">Managing Attorney</div>
-            </div>
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Harvey Goldhammer</div>
-                <div class="attorney-title">Senior Litigation Attorney</div>
-            </div>
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/nathaniel-clark.png" alt="Nathaniel Clark" class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Nathaniel Clark</div>
-                <div class="attorney-title">Senior Litigation Attorney</div>
-            </div>
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/edward-yim.webp" alt="Edward C. Yim" class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Edward C. Yim</div>
-                <div class="attorney-title">Senior Litigation Attorney</div>
-            </div>
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/steven-salazar.png" alt="Steven Salazar" class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Steven Salazar</div>
-                <div class="attorney-title">Associate Attorney</div>
-            </div>
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Donn W. Christensen, Esq.</div>
-                <div class="attorney-title">Managing Attorney</div>
-            </div>
-            <div class="attorney-card">
-                <div class="attorney-photo-wrap"><img src="images/la/artur-mheryan.webp" alt="Artur Mheryan" class="attorney-photo" width="120" height="120" loading="lazy"></div>
-                <div class="attorney-name">Artur Mheryan</div>
-                <div class="attorney-title">Associate Attorney</div>
-            </div>
-        </div>
-    </section>
 
     <div class="video-section">
         <h2 style="text-align: center; font-size: 28px; font-weight: 800; margin-bottom: 16px;">See How We Help</h2>
@@ -490,6 +462,48 @@
     <div class="reassurance">
         You pay nothing unless we win.
     </div>
+
+    <section class="attorneys-section">
+        <h2>Our Attorneys</h2>
+        <p class="section-sub">Insider Accident Lawyers</p>
+        <div class="attorneys-grid">
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/shawn-rokni-attorney.webp" alt="Shawn Rokni" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Shawn Rokni</div>
+                <div class="attorney-title">Managing Attorney</div>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Harvey Goldhammer</div>
+                <div class="attorney-title">Senior Litigation Attorney</div>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/nathaniel-clark.png" alt="Nathaniel Clark" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Nathaniel Clark</div>
+                <div class="attorney-title">Senior Litigation Attorney</div>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/edward-yim.webp" alt="Edward C. Yim" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Edward C. Yim</div>
+                <div class="attorney-title">Senior Litigation Attorney</div>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/steven-salazar.png" alt="Steven Salazar" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Steven Salazar</div>
+                <div class="attorney-title">Associate Attorney</div>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Donn W. Christensen, Esq.</div>
+                <div class="attorney-title">Managing Attorney</div>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-photo-wrap"><img src="images/la/artur-mheryan.webp" alt="Artur Mheryan" class="attorney-photo" width="120" height="120" loading="lazy"></div>
+                <div class="attorney-name">Artur Mheryan</div>
+                <div class="attorney-title">Associate Attorney</div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div style="font-size: 24px; font-weight: 800; margin-bottom: 16px;">
